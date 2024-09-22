@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Craft Planner & Schedule Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="craft-planner-container">
+        <nav>
+            <ul>
+                <li><a href="task-schedule.html">Plan & Track</a></li>
+                <li><a href="material-stock.html">Material Stock</a></li>
+            </ul>
+        </nav>
+
+        <div class="craft-planner-header">
+            <h1>CraftyPlanner</h1>
+            <div class="quick-add-task-container">
+                <button id="add-task-btn" class="quick-add-task">+ Add New Task</button>
+                <button id="print-calendar-btn" class="schedule-button-container">Print Calendar</button>
+            </div>            
+        </div>                  
+
+        <div class="craft-planner-content">
+            <!-- Left Side: Task List -->
+            <div class="task-manager">
+                <h2>Your Tasks</h2>
+                <ul id="task-list">
+                    <li id="order-fulfillment-task">
+                        <input type="checkbox" id="order-fulfillment" disabled> Order Fulfillment - Due: 09-20-2024, Repeat: None
+                        <ul>
+                            <li><input type="checkbox" class="subtask" data-date="09-20-2024"> Design</li>
+                            <li><input type="checkbox" class="subtask" data-date="09-20-2024"> Production</li>
+                            <li><input type="checkbox" class="subtask" data-date="09-20-2024"> Shipping</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>           
+
+            <!-- Right Side: Schedule Calendar -->
+            <div class="schedule-calendar">
+                <h2>Weekly Schedule</h2>
+                <div id="calendar">
+                    <div class="calendar-body" id="calendar-body">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal for Adding a New Task -->
+        <div class="modal" id="task-modal">
+            <div class="modal-content">
+                <span class="close-btn" id="close-modal-btn">&times;</span>
+                <h2>Add New Task</h2>
+                <input type="text" id="task-name" placeholder="Enter task name">
+                <label for="task-category">Category:</label>
+                <select id="task-category">
+                    <option value="order-fulfillment">Order Fulfillment</option>
+                    <option value="marketing">Marketing</option>
+                </select>
+                <label for="task-date">Due Date:</label>
+                <input type="date" id="task-date" required>
+                <label for="task-recurrence">Repeat:</label>
+                <select id="task-recurrence">
+                    <option value="none">None</option>
+                    <option value="daily">Daily</option>
+                    <option value="weekly">Weekly</option>
+                    <option value="monthly">Monthly</option>
+                </select>
+                <button id="save-task-btn">Save Task</button>
+            </div>
+        </div>
+
+        <script src="scripts.js"></script>
+    </div>
+</body>
+</html>
+

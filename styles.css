@@ -1,0 +1,257 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.login-page, .register-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.login-container, .register-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+button {
+    padding: 10px;
+    background-color: #8497ff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #6573ff;
+}
+
+.register-link, .login-link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.register-link a, .login-link a {
+    color: #8497ff;
+    text-decoration: none;
+}
+
+.register-link a:hover, .login-link a:hover {
+    text-decoration: underline;
+}
+
+.craft-planner-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0;
+}
+
+nav ul li a {
+    display: inline-block;
+    padding: 15px;
+    color: #333;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #c1ceff;
+    color: #000;
+}
+
+.craft-planner-header {
+    margin-bottom: 20px;
+}
+
+.quick-add-task-container {
+    display: flex;
+    align-items: center;
+}
+
+#add-task-btn, #print-calendar-btn {
+    padding: 10px;
+    background-color: #8497ff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 150px;
+}
+
+#add-task-btn {
+    margin-right: 10px;
+}
+
+#print-calendar-btn {
+    position: relative;
+    left: 470px;
+}
+
+button:hover {
+    background-color: #6573ff
+}
+
+.craft-planner-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.task-manager, .schedule-calendar {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.task-manager {
+    margin-right: 20px;
+}
+
+.schedule-calendar {
+    margin-left: 20px;
+}
+
+#task-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#task-list li {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-radius: 3px;
+}
+
+#calendar-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.calendar-day {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.calendar-day strong {
+    font-size: 1.2em;
+}
+
+.calendar-day .task-name {
+    font-size: 14px;
+    color: #333;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.close-btn {
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: red;
+}
+
+#task-name, #task-date, #task-recurrence, #task-category {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#save-task-btn {
+    padding: 10px;
+    background-color: #8497ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#save-task-btn:hover {
+    background-color: #6573ff;
+}
+
+ul {
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0; 
+}
+

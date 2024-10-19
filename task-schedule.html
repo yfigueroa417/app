@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Craft Planner & Schedule Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="craft-planner-container">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="task-schedule.html">Plan & Track</a></li>
+                    <li><a href="material-stock.html">Material Stock</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Adding SVG Logo -->
+        <div class="craft-planner-header" style="text-align: center; margin-bottom: 20px;">
+            <a href="task-schedule.html">
+                <img src="crafty-planner-logo.svg" alt="CraftyPlanner Logo" style="max-width: 150px; height: auto; margin-top: 20px;">
+            </a>
+            <div class="quick-add-task-container" style="margin-top: 20px;">
+                <button id="add-task-btn" class="quick-add-task" aria-label="Add a new task">+ Add New Task</button>
+                <button id="print-calendar-btn" class="schedule-button-container" aria-label="Print the calendar">Print Calendar</button>
+            </div>
+        </div>                  
+
+        <div class="craft-planner-content">
+            <!-- Left Side: Task List -->
+            <div class="task-manager">
+                <h2>Your Tasks</h2>
+                <ul id="task-list">
+                    <li id="order-fulfillment-task">
+                        <input type="checkbox" id="order-fulfillment" disabled> Order Fulfillment - Due: 09-20-2024
+                        <ul>
+                            <li><input type="checkbox" class="subtask" data-date="09-20-2024"> Design</li>
+                            <li><input type="checkbox" class="subtask" data-date="09-20-2024"> Production</li>
+                            <li><input type="checkbox" class="subtask" data-date="09-20-2024"> Shipping</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>           
+
+            <!-- Right Side: Schedule Calendar -->
+            <div class="schedule-calendar">
+                <h2>Weekly Schedule</h2>
+                <div class="week-navigation">
+                    <a id="prev-week-btn" href="#" class="nav-link" aria-label="Go to previous week">Previous Week</a>
+                    <a id="next-week-btn" href="#" class="nav-link" aria-label="Go to next week">Next Week</a>
+                </div>
+                <div id="calendar">
+                    <div class="calendar-body" id="calendar-body">
+                        <!-- Calendar days loaded -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal for Adding a New Task -->
+        <div class="modal" id="task-modal">
+            <div class="modal-content">
+                <span class="close-btn" id="close-modal-btn">&times;</span>
+                <h2>Add New Task</h2>
+                <input type="text" id="task-name" placeholder="Enter task name" aria-label="Task name">
+                <label for="task-category">Category:</label>
+                <select id="task-category" aria-label="Task category">
+                    <option value="order-fulfillment">Order Fulfillment</option>
+                    <option value="marketing">Marketing</option>
+                </select>
+                <label for="task-date">Due Date:</label>
+                <input type="date" id="task-date" required aria-label="Due date">
+                <button id="save-task-btn" aria-label="Save task">Save Task</button>
+            </div>
+        </div>
+
+        <script src="scripts.js"></script>
+    </div>
+</body>
+</html>

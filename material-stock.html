@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material Stock Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <div class="craft-planner-container">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="task-schedule.html">Plan & Track</a></li>
+                    <li><a href="material-stock.html">Material Stock</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Adding SVG Logo -->
+        <div class="craft-planner-header" style="text-align: center; margin-bottom: 20px;">
+            <a href="task-schedule.html">
+                <img src="crafty-planner-logo.svg" alt="CraftyPlanner Logo" style="max-width: 150px; height: auto; margin-top: 20px;">
+
+            </a>
+        </div>  
+
+        <!-- Page Content -->
+        <div class="stock-container">
+            <h2>Add or Update Inventory</h2>
+            <div class="stock-form">
+                <input type="text" id="material-name" placeholder="Material Name" required>
+                <input type="number" id="material-quantity" placeholder="Quantity" required min="1">
+                <button id="add-update-btn">Add Material</button>
+            </div>
+
+            <div id="notification" class="notification"></div>
+
+            <h2>Current Inventory</h2>
+            <table class="stock-list">
+                <thead>
+                    <tr>
+                        <th>Material</th>
+                        <th>Quantity</th>
+                        <th>Update Quantity</th>
+                    </tr>
+                </thead>
+                <tbody id="stock-list-body">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
